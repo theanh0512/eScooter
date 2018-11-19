@@ -1,5 +1,5 @@
 {
-  "name": "empty-project-template",
+  "name": "eScooter",
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {
@@ -11,7 +11,16 @@
   "dependencies": {
     "expo": "^31.0.2",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "lodash": "4.17.10",
+    "react-navigation": "^2.18.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-persist": "^4.1.0",
+    "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.2.0",
+    "prop-types": "^15.6.1"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"

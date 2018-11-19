@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19002,
+  "devToolsPort": 19003,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 1632,
-  "expoServerNgrokUrl": "https://bi-pz9.anonymous.escooter.exp.direct",
-  "packagerNgrokUrl": "https://packager.bi-pz9.anonymous.escooter.exp.direct",
-  "ngrokPid": 1655
+  "packagerPid": 16040,
+  "expoServerNgrokUrl": "https://7m-8yv.anonymous.escooter.exp.direct",
+  "packagerNgrokUrl": "https://packager.7m-8yv.anonymous.escooter.exp.direct",
+  "ngrokPid": 16055
 }
