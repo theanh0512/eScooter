@@ -1,8 +1,13 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Dimensions, View } from 'react-native';
 import NavigationBar from 'app/components/NavigationBar';
 import { connect } from 'react-redux';
 import { getScooters } from '../actions/ScooterListAction';
+import ScootersMapView from 'app/components/ScootersMapView';
+import Colors from 'app/common/Colors';
+import _ from 'lodash';
+
+const { height } = Dimensions.get('window');
 
 export default class Main extends React.Component {
   componentDidMount() {
@@ -11,10 +16,30 @@ export default class Main extends React.Component {
 
   render() {
     const { scooters } = this.props;
+    const markers = scooters.map(scooter => (
+      {
+        markerText: scooter.baterry.toString(),
+        title: scooter.serialCode.toString(),
+        description: scooter.serialCode.toString(),
+        coordinate: {
+          latitude: parseFloat(scooter.latitude),
+          longitude: parseFloat(scooter.longitude)
+        }
+      })
+    );
 
     return (
       <View>
-        <Text>{scooters.length > 0? scooters[0].serialCode : 'empty'}</Text>
+        <ScootersMapView
+          style={{
+            height: height,
+            backgroundColor: Colors.grey,
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+          region={_.head(markers).coordinate}
+          markers={markers}
+        />
       </View>
     );
   }

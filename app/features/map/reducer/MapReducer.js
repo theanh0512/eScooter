@@ -1,4 +1,8 @@
-import { HIDE_LOADING_SCOOTERS, SAVE_SCOOTERS, SHOW_LOADING_SCOOTERS } from 'app/features/map/constants';
+import {
+  HIDE_LOADING_SCOOTERS,
+  SAVE_SCOOTERS,
+  SHOW_LOADING_SCOOTERS
+} from 'app/features/map/constants';
 
 const defaultState = {
   scooters: [],
@@ -8,7 +12,7 @@ const defaultState = {
 module.exports = (state = defaultState, action) => {
   switch (action.type) {
     case SAVE_SCOOTERS: {
-      return { ...state, scooters: action.scooters}
+      return { ...state, scooters: action.scooters }
     }
     case SHOW_LOADING_SCOOTERS: {
       return {

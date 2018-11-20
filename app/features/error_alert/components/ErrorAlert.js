@@ -85,7 +85,7 @@ class ErrorAlert extends React.Component {
   }
 
   render() {
-    return <MessageBar />;
+    return <MessageBar/>;
   }
 }
 

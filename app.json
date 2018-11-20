@@ -25,6 +25,14 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.allen.scooter",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDH1EQ-fJHgRVuhvSRhOaOUEUwrls3wF-U"
+        }
+      }
     }
   }
 }

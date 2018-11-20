@@ -22,7 +22,8 @@ const handleResponse = async (url, response) => {
     case 200:
       try {
         return response.json();
-      } catch (error) {
+      }
+      catch (error) {
         // Log error in parsing json response
         return null;
       }

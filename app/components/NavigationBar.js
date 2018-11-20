@@ -19,7 +19,8 @@ const style = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     marginLeft: 16,
-    marginRight: 16
+    marginRight: 16,
+    marginTop: 16
   },
   leftMenuButton: {
     height: 24,
@@ -68,14 +69,8 @@ const handleOnRightMenuPress = (
 };
 
 const NavigationBar = ({
-                         navigation,
-                         navigationTitle,
-                         showBackButton,
-                         onBackButtonPress,
-                         showRefreshButton,
-                         onRefreshButtonPress,
-                         hideBottomBorder,
-                         grey
+                         navigation, navigationTitle, showBackButton, onBackButtonPress,
+                         showRefreshButton, onRefreshButtonPress, hideBottomBorder, grey
                        }) => (
   <View
     style={[
