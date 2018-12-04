@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": "https://zy-9g3.theanh0512.escooter.exp.direct",
-  "packagerNgrokUrl": "https://packager.zy-9g3.theanh0512.escooter.exp.direct",
-  "ngrokPid": 22012
+  "packagerPort": 19001,
+  "packagerPid": 19828,
+  "expoServerNgrokUrl": "https://zy-9g3.anonymous.escooter.exp.direct",
+  "packagerNgrokUrl": "https://packager.zy-9g3.anonymous.escooter.exp.direct",
+  "ngrokPid": 19840
 }
