@@ -3,7 +3,8 @@ import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import { routeKeys } from 'app/routes/NavigationRouteSetup';
 import CustomDrawerMenuItem from 'app/components/CustomDrawerMenuItem';
-import MenuIconHome from 'app/resources/svg/menu-icon-home';
+import ScooterIcon from 'app/resources/svg/ic-scooter';
+import MenuIconHistory from 'app/resources/svg/menu-icon-history';
 import Colors from 'app/common/Colors';
 import { BoldText } from "./CustomTexts";
 
@@ -15,9 +16,9 @@ const getIconForMenuItem = (menuItemKey, isSelected) => {
   const fillColor = isSelected ? null : Colors.greyDark;
   switch (menuItemKey) {
     case routeKeys.Main:
-      return <MenuIconHome fillColor={fillColor}/>;
+      return <ScooterIcon fillColor={fillColor}/>;
     case routeKeys.Trips:
-      return <MenuIconHome fillColor={fillColor}/>;
+      return <MenuIconHistory fillColor={fillColor}/>;
     default:
       return null;
   }
@@ -27,7 +28,7 @@ const DrawerMenu = ({ navigation, items, screenProps, activeItemKey }) => (
   <View style={{}}>
     <View style={{ flexDirection: 'row', height: 64, backgroundColor: Colors.purple }}>
       <View style={{ marginTop: 32, marginLeft: 32 }}>
-        <MenuIconHome fillColor={Colors.white}/>
+        <ScooterIcon fillColor={Colors.white}/>
       </View>
       <BoldText text={'eScooter Singapore'} fontSize={21}
                 style={{ marginTop: 32, marginLeft: 32, color: Colors.white }}/>

@@ -1,22 +1,25 @@
 import { StyleSheet } from 'react-native';
-import Colors from 'app/common/Colors';
+
 
 export default StyleSheet.create({
   marker: {
-    height: 36,
-    width: 36
+    height: 45,
+    width: 45
   },
   container: {
     flex: 1
   },
   overlayText: {
-    color: Colors.white,
-    backgroundColor: 'transparent',
+    position: 'absolute',
+    left: -1,
+    right: 0,
+    bottom: 24
+  },
+  overlayContainer: {
     position: 'absolute',
     left: 0,
     right: 0,
-    top: 4,
-    bottom: 0,
-    textAlign: 'center'
+    top: -2,
+    bottom: 0
   }
 });

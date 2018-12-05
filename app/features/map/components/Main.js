@@ -65,7 +65,7 @@ export default class Main extends React.Component {
     if (location) {
       markers = scooters.map(scooter => (
         {
-          markerText: scooter.baterry.toString(),
+          batteryLevel: scooter.baterry,
           title: `Serial Code: ${scooter.serialCode.toString()}`,
           description: `Distance from you: ${geolib.getDistanceSimple({
             latitude: location.coords.latitude,
@@ -92,7 +92,10 @@ export default class Main extends React.Component {
               justifyContent: 'center',
               alignItems: 'center'
             }}
-            region={_.isEmpty(markers) ? null : _.head(markers).coordinate}
+            region={location ? {
+              latitude: location.coords.latitude,
+              longitude: location.coords.longitude
+            } : null}
             markers={markers}
           />
         </View>

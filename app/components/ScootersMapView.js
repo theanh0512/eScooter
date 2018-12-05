@@ -21,22 +21,8 @@ class ScootersMapView extends React.Component {
         }}
         style={style}
         provider={MapView.PROVIDER_GOOGLE}
-        // When only 1 marker, center on that marker
-        initialRegion={
-          markers.length <= 1
-            ? { ...region, latitudeDelta: 0.04, longitudeDelta: 0.02 }
-            : undefined
-        }
-        // When more than 1 marker, fit markers to map
-        // See https://github.com/react-community/react-native-maps/issues/1003
-        onLayout={() => {
-          if (markers.length > 1) {
-            this.mapRef.fitToCoordinates(this.coordinates, {
-              edgePadding: { top: 80, right: 40, bottom: 40, left: 40 },
-              animated: false
-            });
-          }
-        }}
+        initialRegion={{ ...region, latitudeDelta: 0.2, longitudeDelta: 0.1 }}
+
         customMapStyle={[
           {
             elementType: 'geometry',
@@ -211,7 +197,7 @@ class ScootersMapView extends React.Component {
             coordinate={marker.coordinate}
             title={marker.title}
             description={marker.description}
-            markerText={marker.markerText}
+            batteryLevel={marker.batteryLevel}
           />
         ))}
       </MapView>
@@ -233,7 +219,7 @@ ScootersMapView.propTypes = {
       }).isRequired,
       title: PropTypes.string,
       description: PropTypes.string,
-      markerText: PropTypes.string
+      batteryLevel: PropTypes.number
     })
   )
 };

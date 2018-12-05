@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { showMessage, MessageBar } from 'react-native-messages';
+import { MessageBar, showMessage } from 'react-native-messages';
 import { isEmptyString } from 'app/utils/StringUtils';
 import { BoldText, RegularText } from 'app/components/CustomTexts';
 import style from 'app/features/error_alert/components/ErrorAlert.styles';
