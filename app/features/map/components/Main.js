@@ -5,7 +5,7 @@ import { ActivityIndicator, Alert, Dimensions, Platform, View } from 'react-nati
 import geolib from 'geolib';
 import { connect } from 'react-redux';
 import NavigationBar from 'app/components/NavigationBar';
-import { getScooters } from '../actions/ScooterListAction';
+import { getScooters } from 'app/features/map/actions/ScooterListAction';
 import ScootersMapView from 'app/components/ScootersMapView';
 import Colors from 'app/common/Colors';
 
