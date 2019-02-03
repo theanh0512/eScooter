@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "eScooterApp",
-    "description": "This project is really great.",
+    "description": "eScooter application with map of scooters and list of trips history",
     "slug": "eScooter",
     "privacy": "public",
     "sdkVersion": "31.0.0",
@@ -33,6 +33,7 @@
           "apiKey": "AIzaSyDH1EQ-fJHgRVuhvSRhOaOUEUwrls3wF-U"
         }
       }
-    }
+    },
+    "githubUrl": "https://github.com/theanh0512/eScooter"
   }
 }

@@ -32,6 +32,7 @@ export default class Main extends React.Component {
 
   _getLocationAsync = async () => {
     let { status } = await Permissions.askAsync(Permissions.LOCATION);
+    const { locationServicesEnabled } = await Expo.Location.getProviderStatusAsync();
     if (status !== 'granted') {
       this.setState({
         errorMessage: 'Permission to access location was denied',
@@ -48,7 +49,19 @@ export default class Main extends React.Component {
         { cancelable: false }
       )
     }
-    else {
+    else if (!locationServicesEnabled) {
+      Alert.alert(
+        'Location not enabled',
+        'Please turn on location access in setting and re-open the app',
+        [
+          {
+            text: 'OK', onPress: () => {
+            }
+          },
+        ],
+        { cancelable: false }
+      )
+    } else {
       let location = await Location.getCurrentPositionAsync({});
       this.setState({ location });
     }
